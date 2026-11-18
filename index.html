@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ótica Popular | Entrar</title>
+
+    <style>
+      :root {
+        --fundo: #4b0a0a;
+        --roxo: #dad6d6;
+        --roxo-escuro: #aaa0a0;
+        --preto: #c2b8b817;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Courier New", monospace;
+        color: var(--preto);
+      }
+
+      .pagina {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 28px 18px;
+        overflow: hidden;
+        background: var(--fundo);
+      }
+
+      /* Óculos decorativos ao fundo */
+      .oculos {
+        position: absolute;
+        z-index: -1;
+        width: clamp(190px, 25vw, 340px);
+        opacity: 0.24;
+        pointer-events: none;
+      }
+
+      .oculos svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        fill: none;
+        stroke: #6b1717;
+        stroke-width: 12;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .oculos-superior {
+        top: 10%;
+        right: -4%;
+        transform: rotate(-14deg);
+      }
+
+      .oculos-inferior {
+        bottom: 3%;
+        left: -7%;
+        transform: rotate(18deg);
+      }
+
+      /* Cartão central */
+      .cartao {
+        width: min(100%, 435px);
+        min-height: 640px;
+        padding: 42px 56px 48px;
+        border: 3px solid var(--preto);
+        border-radius: 52px;
+        background: rgba(99, 11, 5, 0.37);
+      }
+
+      .marca {
+        margin: 0 0 42px;
+        color: var(--roxo);
+        font-family: DelRose-Regular;
+        font-size: clamp(2.7rem, 7vw, 3.2rem);
+        font-weight: 800;
+        letter-spacing: -2px;
+        text-align: center;
+      }
+
+      .campo {
+        margin-bottom: 27px;
+      }
+
+      .campo label {
+        display: block;
+        margin: 0 0 6px 18px;
+        color: var(--roxo-escuro);
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      .campo input {
+        width: 100%;
+        height: 72px;
+        padding: 12px 15px;
+        border: 3px solid var(--preto);
+        border-radius: 19px;
+        outline: none;
+        background: rgba(0, 0, 0, 0.1);
+        color: var(--preto);
+        font: inherit;
+        font-size: 1rem;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .campo input:focus {
+        border-color: var(--roxo-escuro);
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+      }
+
+      .botao-entrar {
+        display: block;
+        width: 210px;
+        min-height: 88px;
+        margin: 54px auto 0;
+        border: 3px solid var(--roxo-escuro);
+        border-radius: 50% / 35%;
+        background: #610505e0;
+        color: #dfc7c7bd;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+        transform: rotate(-2deg);
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+
+      .botao-entrar:hover {
+        background: #771410;
+        transform: rotate(0deg) translateY(-2px);
+      }
+
+      .botao-entrar:focus-visible {
+        outline: 3px solid var(--preto);
+        outline-offset: 4px;
+      }
+
+      .mensagem {
+        min-height: 1.3em;
+        margin-top: 18px;
+        color: #07050c;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        .pagina {
+          padding: 22px 16px;
+        }
+
+        .cartao {
+          min-height: auto;
+          padding: 36px 28px 40px;
+          border-radius: 38px;
+        }
+
+        .marca {
+          margin-bottom: 34px;
+        }
+
+        .campo input {
+          height: 60px;
+        }
+
+        .botao-entrar {
+          width: 180px;
+          min-height: 74px;
+          margin-top: 35px;
+        }
+
+        .oculos-superior {
+          top: 2%;
+          right: -20%;
+        }
+
+        .oculos-inferior {
+          bottom: 1%;
+          left: -22%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="pagina">
+      <div class="oculos oculos-superior" aria-hidden="true">
+        <svg viewBox="0 0 300 150">
+          <path
+            d="M12 42 Q70 12 126 38 L119 91 Q107 123 68 119 Q31 115 21 79 Z"
+          ></path>
+          <path d="M126 38 Q148 30 169 39"></path>
+          <path
+            d="M169 39 Q224 10 286 26 L278 77 Q268 112 231 116 Q193 117 178 85 Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="oculos oculos-inferior" aria-hidden="true">
+        <svg viewBox="0 0 300 150">
+          <path
+            d="M12 42 Q70 12 126 38 L119 91 Q107 123 68 119 Q31 115 21 79 Z"
+          ></path>
+          <path d="M126 38 Q148 30 169 39"></path>
+          <path
+            d="M169 39 Q224 10 286 26 L278 77 Q268 112 231 116 Q193 117 178 85 Z"
+          ></path>
+        </svg>
+      </div>
+
+      <section class="cartao" aria-labelledby="titulo">
+        <h1 class="marca" id="titulo">ótica Popular</h1>
+
+        <form id="form-login">
+          <div class="campo">
+            <label for="email">email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="username"
+              aria-describedby="mensagem"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="senha">senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              autocomplete="current-password"
+              aria-describedby="mensagem"
+              required
+            />
+          </div>
+
+          <button class="botao-entrar" type="submit">entrar</button>
+          <p
+            class="mensagem"
+            id="mensagem"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const formulario = document.getElementById("form-login");
+      const mensagem = document.getElementById("mensagem");
+
+      formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const senha = document.getElementById("senha").value;
+
+        if (!email || !senha) {
+          mensagem.textContent = "Preencha o e-mail e a senha.";
+          return;
+        }
+
+        // Demonstração da interface: ainda não autentica de verdade.
+        mensagem.textContent =
+          "Interface funcionando! Conecte a autenticação para validar sua conta.";
+      });
+    </script>
+  </body>
+</html>
